@@ -1,0 +1,66 @@
+<div class="panel panel-default">
+  <div class="row wrapper border-bottom white-bg page-heading">
+    <!-- <div class="col-sm-3"></div> -->
+    <div class="col-sm-4">
+      <h2>Manage Contact</h2>
+    </div>
+  </div>
+  <div>
+
+
+
+    <div class="col-md-7">
+      <span class="anchor" id="formComplex"></span>
+      <!-- <div class="my-5"></div>
+      <h3>Contact Details form </h3> -->
+      <!-- form complex example -->
+      <form [formGroup]="contactForm">
+        <div class="form-row mt-4">
+          <div class="col-sm-6 pb-3">
+            <label for="exampleFirst">First Name</label>
+            <input type="text" class="form-control" formControlName="FirstName">
+            <validation-messages [control]="contactForm.controls.FirstName"></validation-messages>
+          </div>
+          <div class="col-sm-6 pb-3">
+            <label for="exampleLast">Last Name</label>
+            <input type="text" class="form-control" formControlName="LastName">
+            <validation-messages [control]="contactForm.controls.LastName"></validation-messages>
+          </div>
+          <!-- <div class="col-sm-6 pb-3">
+            <label for="exampleAccount">Email </label>
+            <input type="text" class="form-control" formControlName="email">
+            <validation-messages [control]="contactForm.controls.email"></validation-messages>
+          </div> -->
+          <div class="col-sm-6 pb-3">
+            <label for="exampleCtrl">Mobile #</label>
+            <input type="text" class="form-control" formControlName="MobileNo">
+            <validation-messages [control]="contactForm.controls.MobileNo"></validation-messages>
+          </div>
+          <div class="col-sm-6 pb-3">
+            <label for="exampleZip">City</label>
+            <input type="text" class="form-control" formControlName="City">
+            <validation-messages [control]="contactForm.controls.City"></validation-messages>
+          </div>
+          <div class="col-sm-6 pb-3">
+            <label for="exampleZip">Postal Code</label>
+            <input type="text" class="form-control" formControlName="State">
+            <validation-messages [control]="contactForm.controls.State"></validation-messages>
+          </div>
+          <div class="col-sm-6 pb-3">
+            <a href="javascript:void(0);" [routerLink]="['/contacts']" class="btn btn-primary">
+              <i class="fa fa-chevron-left"></i> Back</a>
+          </div>
+          <div class="col-sm-6 pb-3">
+            <div class="btn-group pull-right">
+              <span></span>
+              <button class="btn btn-primary " [disabled]="contactForm.invalid" (click)="submit()">Save</button>
+              <button class="btn btn-secondary " (click)="reset()">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- </main> -->
+
+  </div>
+</div>
