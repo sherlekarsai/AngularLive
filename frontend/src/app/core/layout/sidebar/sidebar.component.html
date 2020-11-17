@@ -49,7 +49,11 @@
       </div>  
    -->
 
-   <div class="toggle-button" [ngClass]="{ collapsed: collapsed }" (click)="toggleCollapsed()">
+   <div class="toggle-button" [ngClass]="{ collapsed: collapsed }" >
+    <i></i>&nbsp;
+    <span></span>
+  </div>
+  <!-- <div class="toggle-button" [ngClass]="{ collapsed: collapsed }" (click)="toggleCollapsed()">
     <i class="fa fa-fw fa-angle-double-{{ collapsed ? 'right' : 'left' }}"></i>&nbsp;
     <span>Collapse Sidebar</span>
-  </div>
+  </div> -->

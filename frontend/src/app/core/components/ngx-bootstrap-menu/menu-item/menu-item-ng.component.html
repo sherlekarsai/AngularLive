@@ -1,6 +1,6 @@
 <div *ngIf="!hasChildrens; else elseBlock">
   <a
-    routerLink="/{{ menuItem.text }}"
+    routerLink="/{{ menuItem.action }}"
     class="list-group-item list-group-item-action"
     onclick="return false;"
     [ngStyle]="styleLink"

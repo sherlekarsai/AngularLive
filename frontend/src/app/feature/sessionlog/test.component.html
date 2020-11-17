@@ -1,0 +1,37 @@
+<div>
+	<h3>
+		Session Logs
+		
+	</h3>
+	<ngx-datatable #myTable class='material expandable' [rows]="rows" [groupRowsBy]="'SessionId'" [columnMode]="'force'"
+		[scrollbarH]="true" [headerHeight]="50" [footerHeight]="50" [rowHeight]="40" [limit]="4"
+		[groupExpansionDefault]="true">
+		<!-- Group Header Template -->
+		<ngx-datatable-group-header [rowHeight]="50" #myGroupHeader (toggle)="onDetailToggle($event)">
+			<ng-template let-group="group" let-expanded="expanded" ngx-datatable-group-header-template>
+				<div style="padding-left:5px;">
+					<a [class.datatable-icon-right]="!expanded" [class.datatable-icon-down]="expanded"
+						title="Expand/Collapse Group" (click)="toggleExpandGroup(group)">
+						<b>Session ID: {{group.value[0].SessionId}}</b>
+					</a>
+				</div>
+			</ng-template>
+		</ngx-datatable-group-header>
+		<!-- Row Detail Template -->
+		<!-- <ngx-datatable-row-detail [rowHeight]="100" #myDetailRow (toggle)="onDetailToggle($event)">
+			<ng-template let-row="row" let-expanded="expanded" ngx-datatable-row-detail-template>
+				<div style="padding-left:35px;">
+					<div><strong>Address</strong></div>
+					<div>row detail content sample</div>
+				</div>
+			</ng-template>
+		</ngx-datatable-row-detail>
+		Row Column Template -->
+
+		<ngx-datatable-column name="Name" prop="name"></ngx-datatable-column>
+		<ngx-datatable-column name="Description" prop="Description"></ngx-datatable-column>
+    <ngx-datatable-column name="Type" prop="Type"></ngx-datatable-column>
+    <ngx-datatable-column name="Datetime" prop="datetime"></ngx-datatable-column>
+    
+	</ngx-datatable>
+</div>

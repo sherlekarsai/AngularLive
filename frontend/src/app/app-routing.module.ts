@@ -12,6 +12,11 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: () => import("./feature/contact/contact.module").then((module) => module.ContactModule)
   },
+  {
+    path: "sessionlog",
+    canActivate: [AuthGuard],
+    loadChildren: () => import("./feature/sessionlog/test.module").then((module) => module.TestModule)
+  },
 ];
 
 @NgModule({

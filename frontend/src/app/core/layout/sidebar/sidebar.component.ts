@@ -118,13 +118,35 @@ export class SidebarComponent implements OnInit {
       {
         id: "8",
         text: "Session Logs",
-        action: undefined,
+        action: "sessionlog",
         icon: "sentiment_satisfied_alt",
         menuFatherId: "7",
         opacity: undefined,
         children: undefined,
         isCollapsed:undefined
       },
+      
+      {
+        id: "9",
+        text: "Test",
+        action: "test",
+        icon: "sentiment_satisfied_alt",
+        menuFatherId: undefined,
+        opacity: undefined,
+        children: undefined,
+        isCollapsed:undefined
+      },
+      
+      {
+        id: "9",
+        text: "Test",
+        action: "test",
+        icon: "sentiment_satisfied_alt",
+        menuFatherId: "9",
+        opacity: undefined,
+        children: undefined,
+        isCollapsed:undefined
+      }
       // {
       //   id: "8",
       //   text: "Item2.1.1.1",

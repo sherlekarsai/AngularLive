@@ -17,8 +17,9 @@ const contactRoutes: Routes = [
     children: [
       {
         path: "",
-        component: RowAGComponent
+        component: ContactListComponent
       },
+        
       // {
       //   path: "",
       //   component: RowGroupingComponent
@@ -26,7 +27,7 @@ const contactRoutes: Routes = [
       {
         path: "create",
         component: ContactFormComponent
-      },
+      }, 
       // {
       //   path: ":contactId",
       //   component: ContactFormComponent,

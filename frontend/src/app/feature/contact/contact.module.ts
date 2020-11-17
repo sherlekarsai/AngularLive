@@ -4,6 +4,7 @@ import { ContactFormComponent } from "./contact-form/contact-form.component";
 import { ContactListComponent } from "./contact-list/contact-list.component";
 import { RowGroupingComponent } from "./contact-list/rowgroup.component";
 import { RowAGComponent } from "./contact-list/rowag.component";
+
 import { ContactDetailsComponent } from "./contact-details/contact-details.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { CoreModule } from "../../core/core.module";

@@ -4,6 +4,7 @@ import { ContactService } from "../contact.service";
 import { Router } from "@angular/router";
 import { LoginService } from "../../user/login/login.service";
 //import { GlobalConstants } from "../../user/login/global-constants";
+import { UserService } from "../../../core/services/user.service";
 
 @Component({
   selector: "app-contact-list",
@@ -24,7 +25,7 @@ export class ContactListComponent implements OnInit {
     { prop: "City" },
     { prop: "State" }
   ];
-  constructor(private contactService: ContactService, private router: Router,private loginService: LoginService) {
+  constructor(private contactService: ContactService, private router: Router,private loginService: LoginService, private userService: UserService) {
     this.acceessProp = this.loginService.getuserReadWriteValue();
   }
   getAll() {
@@ -41,6 +42,7 @@ export class ContactListComponent implements OnInit {
 
       (error) => {}
     );
+   // this.userService.insertsessionlog();
   }
   onSelect(selected: any) {
     console.log("Select Event", selected, this.selected);

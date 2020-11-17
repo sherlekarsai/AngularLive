@@ -7,7 +7,7 @@ import { AlertComponent, AlertService, ValidationMessagesComponent, ValidationSe
 import { AuthGuard } from "./guards/index";
 import { JwtInterceptorProvider, ErrorInterceptorProvider } from "./helpers/index";
 import { LayoutModule } from "./layout/layout.module";
-import { UserService } from "./services";
+import { UserService } from "./services/user.service";
 import { AuthguardService } from "../core/services/authguard.service";
 
 @NgModule({

@@ -2,18 +2,14 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
 import { map } from "rxjs/operators";
-import { Subject, Observable } from 'rxjs';
-import { environment } from "../../../../environments/environment";
-import { UserService } from '../../../core/services/user.service';
+
+//import { environment } from "../../../../environments/environment";
 
 @Injectable()
-export class LoginService {
+export class TestService {
   static canReadWrite : string;
   canReadWritee : string;
-  private userLoggedIn = new Subject<boolean>();
-  constructor(private http: HttpClient, private userService: UserService) {
-
-  }
+  constructor(private http: HttpClient) {}
   strapiendpoint: string = "https://uatsys.agsindia.com:7592/uidr/api";
   login(username: string, password: string) {
     return this.http
@@ -32,12 +28,11 @@ export class LoginService {
               localStorage.setItem("currentUser", JSON.stringify(user.data));
             }
           }
-         // this.userService.setUserLoggedIn(true)
+
           return user.data;
         })
       );
   }
-
   getuserReadWriteValue() {
     if (typeof window !== "undefined") {
       //this.canReadWritee = "iusd";

@@ -16,7 +16,15 @@ export class AuthGuard implements CanActivate {
     var AllUrlData = [
       {
         id: "1",
-        url: "contact"
+        url: "contacts"
+      },
+      {
+        id: "1",
+        url: "sessionlog"
+      },
+      {
+        id: "1",
+        url: "test"
       },
       {
         id: "2",
@@ -25,6 +33,18 @@ export class AuthGuard implements CanActivate {
       {
         id: "3",
         url: "profile" 
+      },
+      {
+        id: "4",
+        url: "login" 
+      },
+      {
+        id: "4",
+        url: "register" 
+      },
+      {
+        id: "4",
+        url: "forgot" 
       }
       
     ]
@@ -47,15 +67,23 @@ export class AuthGuard implements CanActivate {
           );
           
         }
+        console.log(state.url);
+        if( state.url != '/')
+        {
         var lenExist = AllUrlData.filter((x) => { return state.url.includes(x.url); }).length;
         if(lenExist>0)
         {
+          console.log('url active true');
           return true;
         }
         else
         { 
+          console.log('url active false');
          return false ;
         }
+      }else{
+return true;
+      }
       }
     }
     // not logged in so redirect to login page with the return url
